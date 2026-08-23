@@ -1,0 +1,99 @@
+:root {
+  --green: #6dff00;
+  --white: #f4f4f4;
+  --black: #000;
+}
+
+.logo-placeholder {
+  position: absolute;
+  left: 3.45%;
+  top: 3%;
+  width: 6.7%;
+  height: 8.7%;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.logo-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.nav {
+  position: absolute;
+  top: 3%;
+  right: 2.8%;
+  height: 5.1%;
+  display: flex;
+  align-items: center;
+  gap: 3.6vw;
+  z-index: 10;
+}
+
+.nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: clamp(9px, 1.05vw, 16px);
+  font-weight: 500;
+  white-space: nowrap;
+  transition: 0.2s ease;
+}
+
+.nav a:hover {
+  color: var(--green);
+}
+
+.nav-ticket {
+  margin-left: 0.2vw;
+  width: 12.5vw;
+  min-width: 130px;
+  max-width: 192px;
+  height: 100%;
+  border: 1px solid var(--green);
+  color: var(--green) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-ticket:hover {
+  background: var(--green);
+  color: #000 !important;
+}
+
+@media (max-width: 900px) {
+  .nav {
+    gap: 2vw;
+  }
+  .nav-ticket {
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav {
+    top: 2.5%;
+    right: 4%;
+    gap: 3vw;
+    height: auto;
+  }
+  .nav a {
+    font-size: 9px;
+  }
+  .nav-ticket {
+    min-width: 88px;
+    max-width: none;
+    padding: 8px 12px;
+    height: auto;
+  }
+  .logo-placeholder {
+    width: 13%;
+    height: 6%;
+  }
+}

@@ -1,0 +1,636 @@
+* {
+  box-sizing: border-box;
+}
+
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #000;
+  overflow: hidden;
+}
+
+body {
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =========================================================
+   FULL SCREEN
+   ========================================================= */
+
+.stage {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #000;
+}
+
+.canvas {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+  isolation: isolate;
+  container-type: size;
+}
+
+/* =========================================================
+   ASSET PLACEHOLDERS
+   ========================================================= */
+   .artist-placeholder {
+  position: absolute;
+  right: -2%;
+  top: 8%;
+  width: 58%;
+  height: 86%;
+
+  border: none;
+  background: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 2;
+}
+
+.artist-placeholder img {
+  width: 150%;
+  height: 160%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  transform: translate(10px, 65px);
+}
+
+.asset-placeholder span {
+  font-size: clamp(7px, 0.65vw, 12px);
+  letter-spacing: 0.18em;
+  font-weight: 700;
+}
+
+.artist-placeholder {
+  right: 0;
+  top: 12%;
+  width: 50.8%;
+  height: 76%;
+  border-color: rgba(109, 255, 0, 0.13);
+}
+
+.artist-placeholder .placeholder-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  opacity: 0.65;
+}
+
+.artist-placeholder small {
+  font-size: clamp(6px, 0.5vw, 10px);
+}
+
+.emblem-placeholder {
+  left: 47.3%;
+  bottom: 4%;
+  width: 5.8%;
+  height: 8.5%;
+}
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+ 
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+  position: absolute;
+
+  left: 4.35%;
+  top: 18.45%;
+
+  width: 54.5%;
+
+  z-index: 4;
+}
+
+.eyebrow {
+  margin: 0 0 1% 1.1%;
+
+  font-size: clamp(10px, 1.32vw, 20px);
+  line-height: 1;
+
+  letter-spacing: 0.43em;
+  font-weight: 400;
+
+  color: #f4f4f4;
+}
+
+/* =========================================================
+   MAIN TITLE
+   ========================================================= */
+
+h1 {
+  position: relative;
+
+  margin: 0;
+
+  color: var(--green);
+
+  font-family:
+    "Permanent Marker",
+    "Brush Script MT",
+    "Arial Black",
+    Impact,
+    sans-serif;
+
+
+  font-weight: 900;
+
+  line-height: 0.78;
+
+  letter-spacing: -0.075em;
+
+  transform: skewX(-5deg);
+  transform-origin: left center;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+}
+
+.title-break {
+  display: none;
+}
+
+/* =========================================================
+   SUBTITLE
+   ========================================================= */
+
+.subline {
+  margin: 2.5% 0 0 1.2%;
+
+  display: flex;
+  align-items: baseline;
+
+  gap: 1.2em;
+
+  font-size: clamp(9px, 1.18vw, 18px);
+
+  letter-spacing: 0.32em;
+
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+.subline span {
+  color: var(--green);
+}
+
+.subline b {
+  color: #eee;
+  font-weight: 400;
+}
+
+/* =========================================================
+   EVENT INFORMATION
+   ========================================================= */
+
+.event-meta {
+  margin-top: 4%;
+  margin-left: 0.8%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 13px;
+
+  font-size: clamp(12px, 1.52vw, 23px);
+
+  line-height: 1.15;
+}
+
+.meta-row {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 17px;
+}
+
+.location-row {
+  line-height: 1.35;
+}
+
+.location-row strong {
+  color: var(--green);
+  font-weight: 400;
+}
+
+/* =========================================================
+   ICONS
+   ========================================================= */
+
+.css-icon {
+  position: relative;
+
+  flex: 0 0 auto;
+
+  width: 22px;
+  height: 22px;
+
+  margin-top: 1px;
+}
+
+.calendar-icon {
+  border: 2px solid var(--green);
+  border-radius: 2px;
+}
+
+.calendar-icon::before {
+  content: "";
+
+  position: absolute;
+
+  left: 2px;
+  right: 2px;
+  top: 5px;
+
+  border-top: 2px solid var(--green);
+}
+
+.calendar-icon::after {
+  content: "";
+
+  position: absolute;
+
+  left: 4px;
+  top: -4px;
+
+  width: 2px;
+  height: 7px;
+
+  background: var(--green);
+
+  box-shadow: 9px 0 var(--green);
+}
+
+.pin-icon {
+  width: 19px;
+  height: 23px;
+
+  border: 2px solid var(--green);
+
+  border-radius: 50% 50% 50% 0;
+
+  transform: rotate(-45deg);
+
+  margin-left: 2px;
+}
+
+.pin-icon::after {
+  content: "";
+
+  position: absolute;
+
+  width: 5px;
+  height: 5px;
+
+  left: 5px;
+  top: 5px;
+
+  border: 1.5px solid var(--green);
+
+  border-radius: 50%;
+}
+
+/* =========================================================
+   COUNTDOWN
+   ========================================================= */
+
+.countdown-wrap {
+  margin-top: 3.4%;
+  margin-left: 0.6%;
+}
+
+.countdown-wrap > p {
+  margin: 0 0 1% 0;
+
+  color: var(--green);
+
+  font-size: clamp(11px, 1.38vw, 21px);
+
+  line-height: 1;
+
+  font-weight: 400;
+}
+
+.countdown {
+  display: flex;
+
+  align-items: flex-start;
+
+  width: 70%;
+
+  justify-content: space-between;
+}
+
+.countdown > div {
+  display: flex;
+
+  flex-direction: column;
+
+  min-width: 18%;
+}
+
+.countdown strong {
+  color: var(--green);
+
+  font-family:
+    "Bebas Neue",
+    Impact,
+    "Arial Narrow Bold",
+    sans-serif;
+
+  font-size: clamp(38px, 5.8vw, 89px);
+
+  line-height: 0.82;
+
+  font-weight: 400;
+
+  letter-spacing: 0.02em;
+}
+
+.countdown span {
+  margin-top: 10px;
+
+  color: #eee;
+
+  font-size: clamp(7px, 1.05vw, 16px);
+
+  line-height: 1;
+}
+
+.countdown i {
+  color: var(--green);
+
+  font-family:
+    "Bebas Neue",
+    Impact,
+    sans-serif;
+
+  font-style: normal;
+
+  font-size: clamp(34px, 4.4vw, 68px);
+
+  line-height: 0.78;
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.actions {
+  margin-top: 4%;
+  margin-left: 0.8%;
+
+  display: flex;
+
+  gap: 22px;
+}
+
+.button {
+  height: 70px;
+
+  width: 295px;
+
+  max-width: 22vw;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding:
+    0
+    30px
+    0
+    48px;
+
+  text-decoration: none;
+
+  font-size: clamp(11px, 1.25vw, 19px);
+
+  font-weight: 700;
+
+  letter-spacing: 0.01em;
+}
+
+.button .arrow {
+  font-size: 29px;
+
+  line-height: 1;
+
+  font-weight: 400;
+}
+
+.primary {
+  background: var(--green);
+
+  color: #050505;
+
+  border: 1px solid var(--green);
+}
+
+.secondary {
+  background: transparent;
+
+  color: var(--green);
+
+  border: 1px solid var(--green);
+}
+
+/* =========================================================
+   IMPORTANT:
+   SHORT / WIDE SCREENS
+   ========================================================= */
+
+/*
+   Your browser is approximately 16:8 rather than 3:2.
+
+   Instead of creating side gaps or making the page taller than
+   the browser, we keep the webpage itself at 100vw × 100vh.
+*/
+
+@media (max-height: 850px) {
+
+  .hero {
+    top: 17%;
+  }
+
+  .event-meta {
+    margin-top: 3%;
+    gap: 9px;
+  }
+
+  .countdown-wrap {
+    margin-top: 2.5%;
+  }
+
+  .actions {
+    margin-top: 3%;
+  }
+
+  .button {
+    height: 62px;
+  }
+}
+
+/* =========================================================
+   VERY SHORT SCREENS
+   ========================================================= */
+
+@media (max-height: 700px) {
+
+  .hero {
+    top: 14%;
+  }
+
+  .eyebrow {
+    margin-bottom: 0.7%;
+  }
+
+  h1 {
+    font-size: clamp(48px, 10.8vw, 160px);
+  }
+
+  .subline {
+    margin-top: 1.7%;
+  }
+
+  .event-meta {
+    margin-top: 2.5%;
+    gap: 7px;
+  }
+
+  .countdown-wrap {
+    margin-top: 2%;
+  }
+
+  .actions {
+    margin-top: 2.5%;
+  }
+
+  .button {
+    height: 55px;
+  }
+}
+
+/* =========================================================
+   SMALL SCREENS
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+
+  .hero {
+    width: 58%;
+  }
+
+  .artist-placeholder {
+    width: 48%;
+  }
+  .countdown {
+    width: 75%;
+  }
+
+  .actions {
+    gap: 10px;
+  }
+
+  .button {
+    height: 55px;
+
+    padding-left: 25px;
+    padding-right: 18px;
+  }
+}
+@media (max-width: 600px) {
+
+  .canvas {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 16px 6% 50px;
+    box-sizing: border-box;
+    gap: 22px;
+  }
+  .title-break {
+  display: block;
+}
+
+
+  /* Unwrap hero so its children become direct flex items of
+     .canvas, sitting alongside the artist photo — this lets us
+     reorder across what used to be separate elements */
+  .hero {
+    display: contents;
+  }
+
+  .eyebrow  { order: 1; margin: 0; }
+  h1        { order: 2; margin: 0; font-size: clamp(42px, 14vw, 72px); white-space: normal; }
+  .subline  { order: 3; margin: 0; flex-wrap: wrap; white-space: normal; }
+
+  .artist-placeholder {
+    order: 4;
+    position: relative;
+    inset: auto;
+    right: auto;
+    top: auto;
+    width: 100%;
+    height: 280px;
+    opacity: 1;
+    z-index: auto;
+  }
+
+  .artist-placeholder img {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    object-position: center 25%;
+    transform: none;
+  }
+
+  .countdown-wrap { order: 5; margin: 0; }
+  .countdown       { width: 100%; }
+
+  .event-meta { order: 6; margin: 0; }
+
+  .actions {
+    order: 7;
+    margin: 0;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .button {
+    width: 100%;
+    max-width: 100%;
+    height: 58px;
+    padding-left: 24px;
+  }
+
+  .emblem-placeholder {
+    display: none;
+  }
+}
