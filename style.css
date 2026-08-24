@@ -676,3 +676,57 @@ h1 {
     display: none;
   }
 }
+@media screen and (max-width: 600px) {
+
+  /* =====================================================
+     MOBILE ARTIST — KEEP IT IN ITS OWN SPACE
+     ===================================================== */
+
+  .artist-placeholder {
+    position: relative !important;
+
+    top: auto !important;
+    right: auto !important;
+    left: auto !important;
+    bottom: auto !important;
+
+    width: 100% !important;
+    height: 330px !important;
+
+    margin: 0 !important;
+
+    display: flex !important;
+    align-items: flex-end !important;
+    justify-content: center !important;
+
+    transform: none !important;
+
+    z-index: 2 !important;
+  }
+
+  .artist-placeholder picture {
+    width: 100% !important;
+    height: 100% !important;
+
+    display: flex !important;
+    align-items: flex-end !important;
+    justify-content: center !important;
+  }
+
+  .artist-placeholder img {
+    position: relative !important;
+
+    width: 115% !important;
+    height: 115% !important;
+
+    max-width: none !important;
+    max-height: none !important;
+
+    object-fit: contain !important;
+    object-position: center bottom !important;
+
+    display: block !important;
+
+    transform: none !important;
+  }
+}
