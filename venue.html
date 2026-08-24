@@ -16,7 +16,6 @@
 
   <link rel="stylesheet" href="venue.css">
   <link rel="stylesheet" href="shared.css">
-<link rel="stylesheet" href="venue.css">
 </head>
 
 <body>
@@ -30,13 +29,44 @@
          NAVIGATION
          ===================================================== -->
 
-    <nav class="nav">
-      <a href="index.html">EVENT</a>
-      <a href="info.html">INFO</a>
-      <a href="venue.html" class="active">VENUE</a>
-      <a href="faq.html">FAQ</a>
-      <a class="nav-ticket" href="tickets.html">GET TICKETS</a>
-    </nav>
+   <nav class="nav">
+
+  <!-- MOBILE HAMBURGER -->
+  <button class="mobile-menu" type="button" aria-label="Open menu">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+  <!-- DESKTOP NAV -->
+  <a href="index.html">EVENT</a>
+  <a href="info.html">INFO</a>
+  <a href="venue.html" class="active">VENUE</a>
+  <a href="faq.html">FAQ</a>
+
+  <a class="nav-ticket" href="tickets.html">
+    GET TICKETS
+  </a>
+
+</nav>
+<div class="mobile-menu-panel">
+
+  <button
+    class="mobile-menu-close"
+    type="button"
+    aria-label="Close menu"
+  ></button>
+
+  <a href="index.html">EVENT</a>
+  <a href="info.html">INFO</a>
+  <a href="venue.html">VENUE</a>
+  <a href="faq.html">FAQ</a>
+
+  <a class="mobile-ticket" href="tickets.html">
+    GET TICKETS
+  </a>
+
+</div>
 
 
     <!-- =====================================================
@@ -74,6 +104,6 @@
     </section>
 
   </main>
-
+<script src="script.js"></script>
 </body>
 </html>
