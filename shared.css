@@ -76,24 +76,162 @@
   }
 }
 
+.mobile-menu {
+  display: none;
+}
+
+.mobile-menu-panel {
+  display: none;
+}
+
+
 @media (max-width: 600px) {
+
   .nav {
-    top: 2.5%;
-    right: 4%;
-    gap: 3vw;
-    height: auto;
+    position: absolute;
+    top: 16px;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+    height: 35px;
+
+    padding: 0 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    z-index: 100;
   }
-  .nav a {
-    font-size: 9px;
+
+  /* Hide desktop links */
+  .nav > a {
+    display: none;
   }
-  .nav-ticket {
-    min-width: 88px;
-    max-width: none;
-    padding: 8px 12px;
-    height: auto;
-  }
+
+
+  /* =========================
+     LOGO — TOP LEFT
+     ========================= */
+
   .logo-placeholder {
-    width: 13%;
-    height: 6%;
+    display: flex;
+
+    position: absolute;
+
+    top: 16px;
+    left: 12px;
+
+    width: 48px;
+    height: 48px;
+
+    border: none;
+    background: transparent;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 110;
+  }
+
+  .logo-placeholder img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+  }
+
+
+  /* =========================
+     HAMBURGER — TOP RIGHT
+     ========================= */
+
+  .mobile-menu {
+    display: flex;
+
+    width: 35px;
+    height: 35px;
+
+    padding: 0;
+    margin: 0;
+
+    border: 1px solid var(--green);
+
+    background: transparent;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 4px;
+
+    cursor: pointer;
+
+    z-index: 110;
+  }
+
+  .mobile-menu span {
+    display: block;
+
+    width: 18px;
+    height: 1px;
+
+    background: var(--green);
+  }
+
+
+  /* =========================
+     MOBILE MENU PANEL
+     ========================= */
+
+  .mobile-menu-panel {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background: #000;
+
+    z-index: 90;
+
+    display: none;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 28px;
+  }
+
+  .mobile-menu-panel a {
+    color: var(--white);
+
+    text-decoration: none;
+
+    font-size: 22px;
+
+    font-weight: 500;
+  }
+
+  .mobile-menu-panel a:hover {
+    color: var(--green);
+  }
+
+  .mobile-menu-panel .mobile-ticket {
+    border: 1px solid var(--green);
+
+    color: var(--green);
+
+    padding: 15px 45px;
+
+    margin-top: 15px;
   }
 }
