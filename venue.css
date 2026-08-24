@@ -19,7 +19,49 @@ body {
   color: var(--white);
   font-family: Arial, Helvetica, sans-serif;
 }
+.arrow {
+  position: relative;
 
+  width: 18px;
+  height: 18px;
+
+  display: block;
+}
+
+/* diagonal line */
+.arrow::before {
+  content: "";
+
+  position: absolute;
+
+  width: 19px;
+  height: 2px;
+
+  background: currentColor;
+
+  top: 9px;
+  left: 0;
+
+  transform: rotate(-45deg);
+
+  transform-origin: center;
+}
+
+/* arrow head */
+.arrow::after {
+  content: "";
+
+  position: absolute;
+
+  width: 8px;
+  height: 8px;
+
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+
+  top: 1px;
+  right: 0;
+}
 
 /* =========================================================
    PAGE
