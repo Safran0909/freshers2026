@@ -729,3 +729,45 @@ h1 {
 .button:hover .arrow {
   transform: translate(5px, -5px);
 }
+/* Wider phones — prevent artist from becoming oversized */
+@media (max-width: 600px) {
+
+  .artist-placeholder {
+    position: relative !important;
+    width: 100% !important;
+    height: 330px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    display: flex !important;
+    align-items: flex-end !important;
+    justify-content: center !important;
+
+    overflow: visible !important;
+    z-index: 2 !important;
+  }
+
+  .artist-placeholder picture {
+    width: 100% !important;
+    height: 100% !important;
+
+    display: flex !important;
+    align-items: flex-end !important;
+    justify-content: center !important;
+  }
+
+  .artist-placeholder img {
+    width: 150% !important;
+    height: auto !important;
+
+    max-width: none !important;
+    max-height: 330px !important;
+
+    display: block !important;
+
+    object-fit: contain !important;
+    object-position: center bottom !important;
+
+    transform: none !important;
+  }
+}
