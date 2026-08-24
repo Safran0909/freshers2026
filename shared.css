@@ -409,3 +409,31 @@
     height: 0;
   }
 }
+  .nav a.active {
+  color: var(--white);
+  position: relative;
+}
+
+.nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -8px;
+  height: 2px;
+  background: var(--green);
+}
+.mobile-menu-panel a.active {
+  color: var(--white);
+  position: relative;
+}
+
+.mobile-menu-panel a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  background: var(--green);
+}
