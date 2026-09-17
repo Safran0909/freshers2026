@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "CyberBlast";
+  src: url("./Cyber.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -85,6 +93,7 @@ body {
 /* =========================================================
    ASSET PLACEHOLDERS
    ========================================================= */
+
    .artist-placeholder {
   position: absolute;
   right: -2%;
@@ -109,6 +118,24 @@ body {
   object-position: center;
   display: block;
   transform: translate(10px, 65px);
+}
+
+.title-placeholder {
+  position: relative;
+  width: 27%;
+  height: auto;
+  margin-top: 3px;
+  margin-bottom: 10px;
+
+  display: flex;
+  align-items: center;
+}
+
+.title-placeholder img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .asset-placeholder span {
@@ -179,7 +206,9 @@ body {
 /* =========================================================
    MAIN TITLE
    ========================================================= */
-
+.gabri{
+  font-family: "CyberBlast", sans-serif;
+}
 h1 {
   position: relative;
 
@@ -187,12 +216,7 @@ h1 {
 
   color: var(--green);
 
-  font-family:
-    "Permanent Marker",
-    "Brush Script MT",
-    "Arial Black",
-    Impact,
-    sans-serif;
+  font-family: "CyberBlast", sans-serif;
 
 
   font-weight: 900;
