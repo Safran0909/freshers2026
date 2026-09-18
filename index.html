@@ -1,119 +1,113 @@
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A freshers with us</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Permanent+Marker&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="shared.css">
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <main class="stage">
-      <section class="canvas" aria-label="Concert landing page">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A freshers with us</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="stage">
+    <section class="canvas" aria-label="Concert landing page">
 
-        <!-- ASSET PLACEHOLDER: logo -->
-        <div class="asset-placeholder logo-placeholder">
-          <img src="name.png" alt="Logo">
+       <div class="asset-placeholder logo-placeholder">
+        <img src="armoda.png" alt="Armoda">
+      </div>
+
+      <nav class="nav">
+
+        <button class="mobile-menu" type="button" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <a href="index.html" class="active">EVENT</a>
+        <a href="info.html">INFO</a>
+        <a href="venue.html">VENUE</a>
+        <a href="faq.html">FAQ</a>
+
+        <a class="nav-ticket" href="https://tickets.armado26.in">
+          GET TICKETS
+        </a>
+
+      </nav>
+      <div class="mobile-menu-panel">
+
+        <button class="mobile-menu-close" type="button" aria-label="Close menu">
+          ×
+        </button>
+
+        <a href="index.html" class="active">EVENT</a>
+        <a href="info.html">INFO</a>
+        <a href="venue.html">VENUE</a>
+        <a href="faq.html">FAQ</a>
+        <a href="https://tickets.armado26.in/login">LOGIN</a>
+
+      </div>
+
+      <section class="hero" id="event">
+        <p class="eyebrow">A NIGHT WITH</p>
+
+        <h1 class="event-title">
+          <span class="line-white">GABRI</span>
+          <span class="line-green">LIVE IN CONCERT</span>
+        </h1>
+
+        <div class="event-meta">
+          <div class="meta-row">
+            <span class="css-icon calendar-icon" aria-hidden="true"></span>
+            <span>25 OCTOBER 2026</span>
+          </div>
+          <div class="meta-row location-row">
+            <span class="css-icon pin-icon" aria-hidden="true"></span>
+            <strong>NANDHINI</strong>
+          </div>
         </div>
 
-        <nav class="nav">
-
-    <button class="mobile-menu" type="button" aria-label="Open menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <a href="index.html" class="active">EVENT</a>
-    <a href="info.html">INFO</a>
-    <a href="venue.html">VENUE</a>
-    <a href="faq.html">FAQ</a>
-
-    <a class="nav-ticket" href="https://tickets.armado26.in">
-      GET TICKETS
-    </a>
-
-  </nav>
-            <div class="mobile-menu-panel">
-
-    <button class="mobile-menu-close" type="button" aria-label="Close menu">
-    ×
-  </button>
-
-    <a href="index.html" class="active">EVENT</a>
-    <a href="info.html">INFO</a>
-    <a href="venue.html">VENUE</a>
-    <a href="faq.html">FAQ</a>
-   <a href="https://tickets.armado26.in/login">LOGIN</a>
-    
-
-  </div>
-
-        <section class="hero" id="event">
-          <p class="eyebrow">A NIGHT WITH</p>
-
-         <div class="title-placeholder">
-  <img src="title.png" alt="title">
-</div>
-
-          <p class="subline">
-            <span class="gabri">GABRI</span>
-            <b>LIVE IN CONCERT</b>
-          </p>
-
-          <div class="event-meta">
-            <div class="meta-row">
-              <span class="css-icon calendar-icon" aria-hidden="true"></span>
-              <span>25 OCTOBER 2026</span>
-            </div>
-            <div class="meta-row location-row">
-              <span class="css-icon pin-icon" aria-hidden="true"></span>
-              <strong>NANDHINI</strong>
-            </div>
+        <div class="countdown-wrap">
+          <p>THE SHOW STARTS IN</p>
+          <div class="countdown" aria-live="polite">
+            <div><strong id="days">11</strong><span>DAYS</span></div>
+            <i>:</i>
+            <div><strong id="hours">05</strong><span>HOURS</span></div>
+            <i>:</i>
+            <div><strong id="minutes">42</strong><span>MINUTES</span></div>
+            <i>:</i>
+            <div><strong id="seconds">19</strong><span>SECONDS</span></div>
           </div>
+        </div>
 
-          <div class="countdown-wrap">
-            <p>THE SHOW STARTS IN</p>
-            <div class="countdown" aria-live="polite">
-              <div><strong id="days">11</strong><span>DAYS</span></div>
-              <i>:</i>
-              <div><strong id="hours">05</strong><span>HOURS</span></div>
-              <i>:</i>
-              <div><strong id="minutes">42</strong><span>MINUTES</span></div>
-              <i>:</i>
-              <div><strong id="seconds">19</strong><span>SECONDS</span></div>
-            </div>
-          </div>
-
-          <div class="actions" id="tickets">
-            <a class="button primary" href="https://tickets.armado26.in">
-              <span>GET TICKETS</span><span class="arrow"></span>
-            </a>
-            <a class="button secondary" href="#info">
-              <span>LEARN MORE</span><span class="arrow"></span>
-            </a>
-          </div>
-        </section>
-
-        <!-- ASSET PLACEHOLDER: artist image -->
-      <div class="asset-placeholder artist-placeholder">
-    <picture>
-      <source media="(max-width: 600px)" srcset="artist1.png">
-      <img src="artist.png" alt="Artist">
-    </picture>
-  </div>
-
-        <!-- ASSET PLACEHOLDER: bottom emblem -->
-
-        <!-- Minimal invisible anchors to preserve the original navigation -->
-        <span id="info" class="anchor"></span>
-        <span id="venue" class="anchor"></span>
-        <span id="faq" class="anchor"></span>
+        <div class="actions" id="tickets">
+          <a class="button primary" href="https://tickets.armado26.in">
+            <span>GET TICKETS</span><span class="arrow"></span>
+          </a>
+          <a class="button secondary" href="#info">
+            <span>LEARN MORE</span><span class="arrow"></span>
+          </a>
+        </div>
       </section>
-    </main>
-    <script src="script.js"></script>
-  </body>
-  </html>
+
+      <!-- ASSET PLACEHOLDER: artist image -->
+      <div class="asset-placeholder artist-placeholder">
+        <picture>
+          <source media="(max-width: 600px)" srcset="artist1.png">
+          <img src="artist.png" alt="Artist">
+        </picture>
+      </div>
+
+      <!-- ASSET PLACEHOLDER: bottom emblem -->
+
+      <!-- Minimal invisible anchors to preserve the original navigation -->
+      <span id="info" class="anchor"></span>
+      <span id="venue" class="anchor"></span>
+      <span id="faq" class="anchor"></span>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
