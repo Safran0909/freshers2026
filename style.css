@@ -94,7 +94,7 @@ body {
    ASSET PLACEHOLDERS
    ========================================================= */
 
-   .artist-placeholder {
+.artist-placeholder {
   position: absolute;
   right: -2%;
   top: 8%;
@@ -118,24 +118,6 @@ body {
   object-position: center;
   display: block;
   transform: translate(10px, 65px);
-}
-
-.title-placeholder {
-  position: relative;
-  width: 27%;
-  height: auto;
-  margin-top: 3px;
-  margin-bottom: 10px;
-
-  display: flex;
-  align-items: center;
-}
-
-.title-placeholder img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: contain;
 }
 
 .asset-placeholder span {
@@ -171,6 +153,16 @@ body {
   height: 8.5%;
 }
 
+/* ===== TEXT LOGO (temporary, until real mark is ready) ===== */
+.site-logo {
+  font-family: "Anton", sans-serif;
+  color: var(--green);
+  font-size: clamp(20px, 2.2vw, 34px);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-shadow: 0 0 20px rgba(109, 255, 0, 0.45);
+}
+
 /* =========================================================
    NAVIGATION
    ========================================================= */
@@ -200,71 +192,88 @@ body {
   letter-spacing: 0.43em;
   font-weight: 400;
 
-  color: #f4f4f4;
+  color: var(--green);
 }
 
 /* =========================================================
    MAIN TITLE
    ========================================================= */
-.gabri{
-  font-family: "CyberBlast", sans-serif;
-}
-h1 {
-  position: relative;
+
+.event-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.08em;
 
   margin: 0;
 
-  color: var(--green);
+  font-family: "Anton", sans-serif;
 
-  font-family: "CyberBlast", sans-serif;
-
-
-  font-weight: 900;
-
-  line-height: 0.78;
-
-  letter-spacing: -0.075em;
-
-  transform: skewX(-5deg);
-  transform-origin: left center;
-
-  text-transform: uppercase;
-
-  white-space: nowrap;
-}
-
-.title-break {
-  display: none;
-}
-
-/* =========================================================
-   SUBTITLE
-   ========================================================= */
-
-.subline {
-  margin: 2.5% 0 0 1.2%;
-
-  display: flex;
-  align-items: baseline;
-
-  gap: 1.2em;
-
-  font-size: clamp(9px, 1.18vw, 18px);
-
-  letter-spacing: 0.32em;
+  font-weight: 400;
 
   line-height: 1;
 
-  white-space: nowrap;
+  letter-spacing: 0.01em;
+
+  text-transform: uppercase;
+  white-space: normal;
 }
 
-.subline span {
+.event-title .line-white {
+  color: #f4f1ea;
+  font-family: "CyberBlast", sans-serif;
+  font-size: clamp(48px, 6.2vw, 96px);
+}
+
+.event-title .line-green {
   color: var(--green);
+  font-size: clamp(48px, 6.2vw, 96px);
+  text-shadow:
+    0 0 20px rgba(109, 255, 0, 0.55),
+    0 0 45px rgba(109, 255, 0, 0.3);
+  animation: neon-flicker 4s infinite;
 }
 
-.subline b {
-  color: #eee;
-  font-weight: 400;
+@keyframes neon-flicker {
+  0%, 100% {
+    text-shadow:
+      0 0 20px rgba(109, 255, 0, 0.55),
+      0 0 45px rgba(109, 255, 0, 0.3);
+  }
+  3% {
+    text-shadow:
+      0 0 6px rgba(109, 255, 0, 0.2),
+      0 0 12px rgba(109, 255, 0, 0.1);
+  }
+  6% {
+    text-shadow:
+      0 0 20px rgba(109, 255, 0, 0.55),
+      0 0 45px rgba(109, 255, 0, 0.3);
+  }
+  8% {
+    text-shadow:
+      0 0 4px rgba(109, 255, 0, 0.15),
+      0 0 10px rgba(109, 255, 0, 0.08);
+  }
+  10% {
+    text-shadow:
+      0 0 20px rgba(109, 255, 0, 0.55),
+      0 0 45px rgba(109, 255, 0, 0.3);
+  }
+  45% {
+    text-shadow:
+      0 0 20px rgba(109, 255, 0, 0.55),
+      0 0 45px rgba(109, 255, 0, 0.3);
+  }
+  48% {
+    text-shadow:
+      0 0 8px rgba(109, 255, 0, 0.25),
+      0 0 16px rgba(109, 255, 0, 0.12);
+  }
+  50% {
+    text-shadow:
+      0 0 20px rgba(109, 255, 0, 0.55),
+      0 0 45px rgba(109, 255, 0, 0.3);
+  }
 }
 
 /* =========================================================
@@ -280,6 +289,7 @@ h1 {
 
   gap: 13px;
 
+  font-family: "Poppins", "Arial", sans-serif;
   font-size: clamp(12px, 1.52vw, 23px);
 
   line-height: 1.15;
@@ -298,7 +308,7 @@ h1 {
 
 .location-row strong {
   color: var(--green);
-  font-weight: 400;
+  font-weight: 600;
 }
 
 /* =========================================================
@@ -440,9 +450,11 @@ h1 {
 
   color: #eee;
 
-  font-size: clamp(7px, 1.05vw, 16px);
+  font-size: clamp(9px, 1.05vw, 16px);
 
   line-height: 1;
+
+  letter-spacing: 0.08em;
 }
 
 .countdown i {
@@ -575,12 +587,9 @@ h1 {
     margin-bottom: 0.7%;
   }
 
-  h1 {
+  .event-title .line-white,
+  .event-title .line-green {
     font-size: clamp(48px, 10.8vw, 160px);
-  }
-
-  .subline {
-    margin-top: 1.7%;
   }
 
   .event-meta {
@@ -636,14 +645,10 @@ h1 {
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    padding: 16px 6% 50px;
+    padding: 40px 6% 50px;
     box-sizing: border-box;
-    gap: 22px;
+    gap: 14px;
   }
-  .title-break {
-  display: block;
-}
-
 
   /* Unwrap hero so its children become direct flex items of
      .canvas, sitting alongside the artist photo — this lets us
@@ -653,8 +658,11 @@ h1 {
   }
 
   .eyebrow  { order: 1; margin: 0; }
-  h1        { order: 2; margin: 0; font-size: clamp(42px, 14vw, 72px); white-space: normal; }
-  .subline  { order: 3; margin: 0; flex-wrap: wrap; white-space: normal; }
+  .event-title { order: 2; margin: 0; }
+  .event-title .line-white,
+  .event-title .line-green {
+    font-size: clamp(32px, 10.5vw, 54px);
+  }
 
   .artist-placeholder {
     order: 4;
@@ -724,6 +732,10 @@ h1 {
     padding-left: 24px;
   }
 
+  .countdown span {
+    font-size: 11px;
+  }
+
   .emblem-placeholder {
     display: none;
   }
@@ -790,7 +802,7 @@ h1 {
     display: block !important;
 
     object-fit: contain !important;
-    object-position: center bottom !important;
+    object-position: center 15% !important;
 
     transform: none !important;
   }
