@@ -691,41 +691,35 @@ body {
   .countdown-wrap {
   order: 5;
   margin: 0;
+  width: 100%;
 }
 
 .countdown {
   width: 100%;
 }
 
-.countdown-wrap > p {
-  width: 100%;
-  text-align: center;
-  margin-left: 0;
-  margin-bottom: 8px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-/* Lines on both sides */
-.countdown-wrap > p::before,
-.countdown-wrap > p::after {
-  content: "";
-  height: 1px;
-  background: rgba(109, 255, 0, 0.35);
+.countdown > div {
   flex: 1;
-  max-width: 70px;
+  min-width: 0;
 }
 
-   .event-meta {
+.countdown > div:last-of-type {
+  align-items: flex-end;
+}
+
+.countdown span {
+  font-size: 11px;
+}
+
+/* DATE + LOCATION */
+.event-meta {
   order: 6;
   margin: 0;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-size: 14px;
 }
 
 .meta-row {
@@ -740,9 +734,17 @@ body {
   line-height: 1.35;
 }
 
-/* Align the last S of SECONDS with the end of NANDHINI */
-.countdown > div:last-of-type {
-  align-items: flex-end;
+/* Keep icons properly sized */
+.css-icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.pin-icon {
+  width: 22px;
+  height: 22px;
+  margin-left: 0;
 }
 
 
