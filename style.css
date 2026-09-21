@@ -703,6 +703,10 @@ body {
   min-width: 0;
 }
 
+.countdown > div:first-of-type {
+  align-items: flex-start;
+}
+
 .countdown > div:last-of-type {
   align-items: flex-end;
 }
@@ -738,7 +742,6 @@ body {
   line-height: 1.35;
 }
 
-/* Keep icons properly sized */
 .css-icon {
   width: 22px;
   height: 22px;
