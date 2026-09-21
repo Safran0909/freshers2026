@@ -370,32 +370,25 @@ body {
 }
 
 .pin-icon {
-  width: 19px;
+  width: 23px;
   height: 23px;
-
   border: 2px solid var(--green);
-
   border-radius: 50% 50% 50% 0;
-
   transform: rotate(-45deg);
-
-  margin-left: 2px;
+  margin-left: 0;
+  box-sizing: border-box;
 }
 
 .pin-icon::after {
   content: "";
-
   position: absolute;
-
-  width: 5px;
-  height: 5px;
-
-  left: 5px;
-  top: 5px;
-
+  width: 6px;
+  height: 6px;
+  left: 6.5px;
+  top: 6.5px;
   border: 1.5px solid var(--green);
-
   border-radius: 50%;
+  box-sizing: border-box;
 }
 
 /* =========================================================
@@ -726,26 +719,28 @@ body {
   max-width: 70px;
 }
 
-  .event-meta {
-  order: 6;
-  margin: 0;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 22px;
-  width: 100%;
-}
+   .event-meta {
+    order: 6;
+    margin: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    column-gap: 25px;
+  }
 
-.meta-row {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  white-space: nowrap;
-}
+  .meta-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+  }
 
-.location-row {
-  line-height: 1.35;
-}
+  .location-row {
+    line-height: 1.35;
+  }
+
+
 
   .actions {
     order: 7;
