@@ -720,25 +720,30 @@ body {
 }
 
    .event-meta {
-    order: 6;
-    margin: 0;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    column-gap: 25px;
-  }
+  order: 6;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-  .meta-row {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    white-space: nowrap;
-  }
+.meta-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
 
-  .location-row {
-    line-height: 1.35;
-  }
+.location-row {
+  justify-content: flex-end;
+  line-height: 1.35;
+}
+
+/* Align the last S of SECONDS with the end of NANDHINI */
+.countdown > div:last-of-type {
+  align-items: flex-end;
+}
 
 
 
