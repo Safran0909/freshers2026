@@ -183,14 +183,16 @@ body {
   z-index: 4;
 }
 
+/* "A NIGHT WITH" - Orbitron, with a bigger gap before GABRI */
 .eyebrow {
-  margin: 0 0 1% 1.1%;
+  margin: 0 0 clamp(14px, 2.2vw, 34px) 1.1%;
 
-  font-size: clamp(10px, 1.32vw, 20px);
+  font-family: "Orbitron", sans-serif;
+  font-weight: 500;
+  font-size: clamp(9px, 1.15vw, 17px);
   line-height: 1;
 
-  letter-spacing: 0.43em;
-  font-weight: 400;
+  letter-spacing: 0.3em;
 
   color: var(--green);
 }
@@ -218,10 +220,15 @@ body {
   white-space: normal;
 }
 
+/* GABRI - stretched 50% wider, same height */
 .event-title .line-white {
   color: #f4f1ea;
   font-family: "CyberBlast", sans-serif;
   font-size: clamp(48px, 6.2vw, 96px);
+
+  align-self: flex-start;          /* stops it stretching across the flex column */
+  transform: scaleX(1.5);          /* change this number for more / less stretch */
+  transform-origin: left center;   /* grows to the right, stays aligned to the left edge */
 }
 
 .event-title .line-green {
@@ -289,8 +296,11 @@ body {
 
   gap: 13px;
 
-  font-family: "Poppins", "Arial", sans-serif;
-  font-size: clamp(12px, 1.52vw, 23px);
+  /* date + NANDHINI - Orbitron */
+  font-family: "Orbitron", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: clamp(11px, 1.3vw, 20px);
+  letter-spacing: 0.04em;
 
   line-height: 1.15;
 }
@@ -308,7 +318,7 @@ body {
 
 .location-row strong {
   color: var(--green);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 /* =========================================================
@@ -584,7 +594,7 @@ body {
   }
 
   .eyebrow {
-    margin-bottom: 0.7%;
+    margin-bottom: clamp(10px, 1.6vw, 24px);
   }
 
   .event-title .line-white,
@@ -657,7 +667,7 @@ body {
     display: contents;
   }
 
-  .eyebrow  { order: 1; margin: 0; }
+  .eyebrow  { order: 1; margin: 0 0 10px; }
   .event-title { order: 2; margin: 0; }
   .event-title .line-white,
   .event-title .line-green {
@@ -716,7 +726,26 @@ body {
   max-width: 70px;
 }
 
-  .event-meta { order: 6; margin: 0; }
+  .event-meta {
+  order: 6;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 22px;
+  width: 100%;
+}
+
+.meta-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.location-row {
+  line-height: 1.35;
+}
 
   .actions {
     order: 7;
