@@ -370,25 +370,32 @@ body {
 }
 
 .pin-icon {
-  width: 23px;
+  width: 19px;
   height: 23px;
+
   border: 2px solid var(--green);
+
   border-radius: 50% 50% 50% 0;
+
   transform: rotate(-45deg);
-  margin-left: 0;
-  box-sizing: border-box;
+
+  margin-left: 2px;
 }
 
 .pin-icon::after {
   content: "";
+
   position: absolute;
-  width: 6px;
-  height: 6px;
-  left: 6.5px;
-  top: 6.5px;
+
+  width: 5px;
+  height: 5px;
+
+  left: 5px;
+  top: 5px;
+
   border: 1.5px solid var(--green);
+
   border-radius: 50%;
-  box-sizing: border-box;
 }
 
 /* =========================================================
@@ -688,84 +695,41 @@ body {
     transform: none;
   }
 
- .countdown-wrap {
+  .countdown-wrap {
   order: 5;
   margin: 0;
-  width: 100%;
 }
 
 .countdown {
   width: 100%;
 }
 
-.countdown > div {
-  flex: 1;
-  min-width: 0;
-}
+.countdown-wrap > p {
+  width: 100%;
+  text-align: center;
+  margin-left: 0;
+  margin-bottom: 8px;
 
-.countdown > div:first-of-type {
-  align-items: flex-start;
-}
-
-.countdown > div:last-of-type {
-  align-items: flex-end;
-}
-
-.countdown span {
-  font-size: 11px;
-}
-
-/* DATE + LOCATION */
-/* The hero is display:contents on mobile, so the rows themselves
-   become flex items of .canvas. Position them against the same
-   100% mobile content width as the countdown. */
-.event-meta {
-  display: contents;
-}
-
-.event-meta .meta-row {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
-  white-space: nowrap;
-  font-family: "Orbitron", "Arial", sans-serif;
-  font-size: 11px;
-  line-height: 1.15;
 }
 
-.event-meta .meta-row:first-child {
-  order: 6;
-  align-self: stretch;
-  justify-self: start;
-  margin: 0;
+/* Lines on both sides */
+.countdown-wrap > p::before,
+.countdown-wrap > p::after {
+  content: "";
+  height: 1px;
+  background: rgba(109, 255, 0, 0.35);
+  flex: 1;
+  max-width: 70px;
 }
 
-.event-meta .location-row {
-  order: 7;
-  align-self: stretch;
-  justify-self: end;
-  margin: 0;
-  line-height: 1.35;
-}
-
-.event-meta .css-icon {
-  width: 22px;
-  height: 22px;
-  flex: 0 0 22px;
-  margin: 0;
-}
-
-.event-meta .pin-icon {
-  width: 22px;
-  height: 22px;
-  margin: 0;
-}
-
-
-
+  .event-meta { order: 6; margin: 0; }
 
   .actions {
-    order: 8;
+    order: 7;
     margin: 0;
     flex-direction: column;
     gap: 12px;
