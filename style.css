@@ -712,27 +712,29 @@ body {
 }
 
 /* DATE + LOCATION */
-.event-meta {
-  order: 6;
-  margin: 0;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 14px;
-}
+ .event-meta {
+    order: 6;
+    margin: 0;
+    width: auto;
+    align-self: stretch;
 
-.meta-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  white-space: nowrap;
-}
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
 
-.location-row {
-  justify-content: flex-end;
-  line-height: 1.35;
-}
+  .meta-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+  }
+
+  .location-row {
+    margin-left: auto;
+    justify-content: flex-end;
+    line-height: 1.35;
+  }
 
 /* Keep icons properly sized */
 .css-icon {
