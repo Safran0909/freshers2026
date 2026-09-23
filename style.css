@@ -659,8 +659,9 @@ body {
   .hero {
     display: contents;
   }
+  
 
-  .eyebrow  { order: 1; margin: 0 0 10px; }
+  .eyebrow  { order: 1; margin: 0 0 -1px; }
   .event-title { order: 2; margin: 0; }
   .event-title .line-white,
   .event-title .line-green {
@@ -669,7 +670,7 @@ body {
 
   .artist-placeholder {
     order: 4;
-    position: relative;
+    position: relative; 
     inset: auto;
     right: auto;
     top: auto;
@@ -808,5 +809,43 @@ body {
     object-position: center 15% !important;
 
     transform: none !important;
+  }
+
+  .logo-placeholder img {
+  width: 75% !important;
+  height: auto !important;
+  max-width: none !important;
+}
+.sponsor-logo {
+    position: absolute;
+    top: 20px;
+    right: 70px;
+    padding-left: 18px;
+    width: 120px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    z-index: 20;
+    
+  }
+  .sponsor-logo::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  height: 28px;
+  width: 1px;
+  background: rgba(255,255,255,0.35);
+}
+
+  .sponsor-logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
   }
 }
