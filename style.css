@@ -820,32 +820,31 @@ body {
     position: absolute;
     top: 20px;
     right: 70px;
-    padding-left: 18px;
+
     width: 120px;
     height: 45px;
 
     display: flex;
     align-items: center;
-    justify-content: center;
-    
+
     z-index: 20;
-    
   }
+
   .sponsor-logo::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 8px;
-  height: 28px;
-  width: 1px;
-  background: rgba(255,255,255,0.35);
-}
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    height: 28px;
+    width: 1px;
+    background: rgba(255,255,255,0.35);
+  }
 
   .sponsor-logo img {
     display: block;
-    width: 100%;
+    width: 102px;
     height: auto;
-    max-width: 100%;
-    object-fit: contain;
+
+    margin-left: 18px;
   }
 }
