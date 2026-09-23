@@ -817,46 +817,34 @@ body {
   max-width: none !important;
 }
 .sponsor-logo {
-    position: absolute;
+  position: absolute;
+  top: 20px;
+  left: 136px;      /* 122px logo-right-edge + 14px gap */
+  height: 45px;
 
-    top: 20px;
-    left: 128px;
+  display: flex;
+  align-items: center;
+  gap: 14px;          /* <-- this now controls BOTH gaps equally */
 
-    width: 180px;
-    height: 45px;
+  padding: 0;
+  margin: 0;
+  z-index: 20;
+}
 
-    display: flex;
-    align-items: center;
+.sponsor-logo::before {
+  content: "";
+  width: 1px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.35);
+  /* no more position/left/top — it's a real flex item now */
+}
 
-    padding: 0;
-    margin: 0;
-
-    z-index: 20;
-  }
-
-  .sponsor-logo::before {
-    content: "";
-
-    position: absolute;
-    left: 0;
-    top: 8px;
-
-    width: 1px;
-    height: 28px;
-
-    background: rgba(255,255,255,0.35);
-  }
-
-  .sponsor-logo img {
-    display: block;
-
-    width: 100px;
-    height: auto;
-
-    margin-left: 10px;
-
-    object-fit: contain;
-  }
-
+.sponsor-logo img {
+  display: block;
+  width: 100px;
+  height: auto;
+  margin-left: 0;    /* gap handles the spacing now, not margin */
+  object-fit: contain;
+}
 
 }
