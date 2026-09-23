@@ -841,7 +841,7 @@ body {
 
 .sponsor-logo img {
   display: block;
-  width: 110px;
+  width: 120px;
   height: auto;
   margin-left: 0;    /* gap handles the spacing now, not margin */
   object-fit: contain;
