@@ -819,7 +819,7 @@ body {
 .sponsor-logo {
   position: absolute;
   top: 20px;
-  left: 100px;      /* 122px logo-right-edge + 14px gap */
+  left: 110px;      /* 122px logo-right-edge + 14px gap */
   height: 45px;
 
   display: flex;
