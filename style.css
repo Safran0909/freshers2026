@@ -816,13 +816,12 @@ body {
   height: auto !important;
   max-width: none !important;
 }
- .sponsor-logo {
+.sponsor-logo {
     position: absolute;
-
     top: 20px;
     left: 35%;
 
-    width: 135px;
+    width: 120px;
     height: 45px;
 
     display: flex;
@@ -850,13 +849,14 @@ body {
   .sponsor-logo img {
     display: block;
 
-    width: 102px;
+    width: 100px;
     height: auto;
 
     max-width: none;
 
-    margin-left: 57px;
+    margin-left: 12px;
 
     object-fit: contain;
   }
+
 }
