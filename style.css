@@ -816,11 +816,11 @@ body {
   height: auto !important;
   max-width: none !important;
 }
-.sponsor-logo {
+ .sponsor-logo {
     position: absolute;
 
     top: 20px;
-    left: 44%;
+    left: 39.5%;
 
     width: 135px;
     height: 45px;
@@ -834,12 +834,10 @@ body {
     z-index: 20;
   }
 
-  /* separator */
   .sponsor-logo::before {
     content: "";
 
     position: absolute;
-
     left: 0;
     top: 8px;
 
@@ -857,9 +855,8 @@ body {
 
     max-width: none;
 
-    margin-left: 40px;
+    margin-left: 57px;
 
     object-fit: contain;
   }
-
 }
