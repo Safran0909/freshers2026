@@ -269,7 +269,7 @@ body::-webkit-scrollbar {
       than before.
     */
     top: 7px !important;
-    left: 22px !important;
+    left: 11px !important;
 
     right: auto !important;
     bottom: auto !important;
@@ -645,4 +645,4 @@ body::-webkit-scrollbar {
     height: 0;
   }
 
-}
+} 
