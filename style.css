@@ -539,6 +539,34 @@ body {
 
   border: 1px solid var(--green);
 }
+.sponsor-logo {
+  position: absolute;
+  top: 1.8%;          /* was 2.2% — raise it to line up with Sabka's top edge */
+  left: 13.8%;
+  height: 7.5%;         /* was 5.5% — bigger lockup overall */
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 0;
+  margin: 0;
+  z-index: 10;
+}
+
+.sponsor-logo::before {
+  content: "";
+  width: 1px;
+  height: 70%;          /* was 60% — slightly taller line to match bigger logo */
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.sponsor-logo img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
 
 /* =========================================================
    IMPORTANT:
