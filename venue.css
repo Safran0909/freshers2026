@@ -1,7 +1,17 @@
+/* =========================================================
+   VENUE PAGE
+   Page-specific CSS only.
+   Header / logos / navigation are controlled by shared.css
+   ========================================================= */
+
 * {
   box-sizing: border-box;
 }
 
+
+/* =========================================================
+   PAGE
+   ========================================================= */
 
 html,
 body {
@@ -11,7 +21,6 @@ body {
   padding: 0;
 
   background: #000;
-
   overflow: hidden;
 }
 
@@ -19,6 +28,23 @@ body {
   color: var(--white);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.venue-page {
+  position: relative;
+
+  width: 100vw;
+  height: 100vh;
+
+  overflow: hidden;
+
+  background: #000;
+}
+
+
+/* =========================================================
+   ARROW
+   ========================================================= */
+
 .arrow {
   position: relative;
 
@@ -28,7 +54,9 @@ body {
   display: block;
 }
 
-/* diagonal line */
+
+/* Diagonal line */
+
 .arrow::before {
   content: "";
 
@@ -43,11 +71,12 @@ body {
   left: 0;
 
   transform: rotate(-45deg);
-
   transform-origin: center;
 }
 
-/* arrow head */
+
+/* Arrow head */
+
 .arrow::after {
   content: "";
 
@@ -63,27 +92,6 @@ body {
   right: 0;
 }
 
-/* =========================================================
-   PAGE
-   ========================================================= */
-
-.venue-page {
-  position: relative;
-
-  width: 100vw;
-  height: 100vh;
-
-  overflow: hidden;
-
-  background: #000;
-}
-
-
-/* =========================================================
-   NAVIGATION
-   ========================================================= */
-
-
 
 /* =========================================================
    VENUE CONTENT
@@ -91,13 +99,19 @@ body {
 
 .venue-content {
   position: absolute;
+
   left: 2%;
   right: 2%;
+
   top: 0;
   bottom: 0;
+
   display: flex;
+
   align-items: flex-start;
+
   padding-top: 4%;
+
   gap: 2%;
 }
 
@@ -108,15 +122,23 @@ body {
 
 .venue-copy {
   position: relative;
+
   width: 31%;
   height: 100%;
+
   z-index: 5;
+
   padding-left: 0.2%;
   padding-top: 4.1%;
-    margin: 10px 65px 50px;
+
+  margin: 10px 65px 50px;
+
   display: flex;
+
   flex-direction: column;
-  justify-content: flex-start;   /* add this */
+
+  justify-content: flex-start;
+
   gap: 20px;
 }
 
@@ -125,10 +147,8 @@ body {
    FIND YOUR WAY
    ========================================================= */
 
-.eyebrow {
+.venue-copy .eyebrow {
   margin: 0;
-
-  margin-top: 0;
 
   color: var(--white);
 
@@ -141,47 +161,78 @@ body {
   line-height: 1.1;
 }
 
+
 /* =========================================================
    LOCATION TITLE
    ========================================================= */
 
 .venue-copy h1 {
   margin: 0;
+
   color: var(--green);
-  font-size: clamp(44px, 5.5vw, 82px);   /* was probably too large — dial this down */
-  line-height: 1.0;
+
+  font-size: clamp(44px, 5.5vw, 82px);
+
+  line-height: 1;
 }
+
+
+/* =========================================================
+   DIRECTIONS BUTTON
+   ========================================================= */
 
 .directions-button {
   width: 27vw;
+
   max-width: 440px;
   min-width: 300px;
+
   height: 9%;
+
   min-height: 62px;
   max-height: 84px;
+
   border: 2px solid var(--green);
+
   color: var(--green);
+
   text-decoration: none;
+
   display: flex;
+
   align-items: center;
   justify-content: space-between;
+
   padding-left: 3.2vw;
   padding-right: 2.3vw;
+
   font-size: clamp(13px, 1.35vw, 21px);
+
   font-weight: 700;
-  transition: background 0.2s ease, color 0.2s ease;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+
   margin-top: 0;
+
   position: static;
 }
 
 .directions-button:hover {
   background: var(--green);
+
   color: #000;
 }
 
 .directions-button .arrow {
+  width: 18px;
+  height: 18px;
+
   font-size: clamp(22px, 2vw, 32px);
+
   line-height: 1;
+
   font-weight: 400;
 }
 
@@ -192,21 +243,37 @@ body {
 
 .venue-map {
   position: relative;
+
   width: 100%;
   max-width: 700px;
+
   height: 380px;
+
   border-radius: 8px;
+
   overflow: hidden;
+
   margin: 100px 60px 0 auto;
-  /* NO transform */
 }
+
+
+/* =========================================================
+   GOOGLE MAP
+   ========================================================= */
 
 .venue-map iframe {
   width: 100%;
   height: 100%;
+
   border: 0;
+
   display: block;
-  filter: invert(90%) hue-rotate(180deg) brightness(0.95) contrast(0.9);
+
+  filter:
+    invert(90%)
+    hue-rotate(180deg)
+    brightness(0.95)
+    contrast(0.9);
 }
 
 
@@ -220,7 +287,6 @@ body {
   inset: 0;
 
   width: 100%;
-
   height: 100%;
 
   object-fit: cover;
@@ -232,13 +298,6 @@ body {
 
 
 /* =========================================================
-   DARK MAP OVERLAY
-   ========================================================= */
-
-
-
-
-/* =========================================================
    VENUE MARKER
    ========================================================= */
 
@@ -246,7 +305,6 @@ body {
   position: absolute;
 
   left: 58%;
-
   top: 35%;
 
   transform: translate(-50%, -50%);
@@ -269,7 +327,6 @@ body {
   position: relative;
 
   width: clamp(45px, 5vw, 76px);
-
   height: clamp(58px, 6.3vw, 94px);
 
   background: var(--green);
@@ -285,7 +342,6 @@ body {
   display: flex;
 
   align-items: center;
-
   justify-content: center;
 
   filter:
@@ -296,7 +352,6 @@ body {
 
 .pin-hole {
   width: 32%;
-
   height: 32%;
 
   background: #000;
@@ -323,7 +378,7 @@ body {
 
 
 /* =========================================================
-   RESPONSIVE
+   SHORT DESKTOP SCREENS
    ========================================================= */
 
 @media (max-height: 800px) {
@@ -337,15 +392,17 @@ body {
   }
 
   .directions-button {
-    top: 54%;
-
     height: 70px;
   }
+
 }
 
 
-@media (max-width: 900px) {
+/* =========================================================
+   TABLET / SMALL DESKTOP
+   ========================================================= */
 
+@media (max-width: 900px) {
 
   .venue-copy {
     width: 36%;
@@ -364,61 +421,133 @@ body {
 
     min-width: 230px;
   }
+
 }
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
 
 @media (max-width: 600px) {
 
   .venue-page {
-  overflow-y: auto;
-  scrollbar-gutter: stable;
-  height: auto;
-  min-height: 100vh;
-}
+    overflow-y: auto;
 
-  /* Stack copy above map instead of side-by-side */
+    scrollbar-gutter: stable;
+
+    height: auto;
+
+    min-height: 100vh;
+  }
+
+
+  /* -------------------------------------------------------
+     STACK CONTENT
+     ------------------------------------------------------- */
+
   .venue-content {
     position: relative;
+
     left: 0;
     right: 0;
+
+    top: auto;
+    bottom: auto;
+
     flex-direction: column;
+
     align-items: stretch;
-    padding: 90px 6% 50px;
+
+    padding:
+      90px
+      6%
+      50px;
+
     gap: 30px;
   }
-  
+
+
+  /* -------------------------------------------------------
+     VENUE COPY
+     ------------------------------------------------------- */
 
   .venue-copy {
     width: 100%;
+
     height: auto;
+
     margin: 0;
+
     padding: 0;
+
     gap: 14px;
   }
-  
 
-  .venue-copy h1 {
-    font-size: clamp(36px, 12vw, 60px);
-  }
 
-  .eyebrow {
+  /* -------------------------------------------------------
+     EYEBROW
+     ------------------------------------------------------- */
+
+  .venue-copy .eyebrow {
     font-size: 13px;
+
     letter-spacing: 0.18em;
   }
 
+
+  /* -------------------------------------------------------
+     TITLE
+     ------------------------------------------------------- */
+
+  .venue-copy h1 {
+    font-size: clamp(36px, 12vw, 60px);
+
+    line-height: 1;
+  }
+
+
+  /* -------------------------------------------------------
+     DIRECTIONS BUTTON
+     ------------------------------------------------------- */
+
   .directions-button {
     width: 100%;
+
     max-width: none;
+
     min-width: 0;
+
     height: 58px;
+
     min-height: 0;
+
+    max-height: none;
+
     padding-left: 24px;
     padding-right: 18px;
   }
 
+
+  /* -------------------------------------------------------
+     MAP
+     ------------------------------------------------------- */
+
   .venue-map {
     width: 100%;
+
     max-width: none;
+
     height: 300px;
+
     margin: 0;
+
+    border-radius: 8px;
   }
+
+  .venue-map iframe {
+    width: 100%;
+    height: 100%;
+  }
+
 }
