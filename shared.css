@@ -1,8 +1,3 @@
-/* =========================================================
-   FINAL SHARED HEADER / NAV
-   Same on INDEX + VENUE
-   ========================================================= */
-
 :root {
   --green: #6dff00;
   --white: #f4f4f4;
@@ -11,151 +6,220 @@
 
 
 /* =========================================================
-   SABKA LOGO
+   GLOBAL
    ========================================================= */
 
-.logo-placeholder {
-  position: absolute;
-  left: 3.45%;
-  top: 3%;
-  width: 10%;
-  height: 8.7%;
-
-  border: none;
-  background: transparent;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  z-index: 110;
+* {
+  box-sizing: border-box;
 }
 
-.logo-placeholder img {
+html,
+body {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #000;
 
-  object-fit: contain;
-  display: block;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
 }
 
 
 /* =========================================================
-   RUMI LOGO
+   SABKA LOGO — DESKTOP
+   ========================================================= */
+
+.logo-placeholder {
+  position: absolute !important;
+
+  left: 3.45% !important;
+  top: 2.2% !important;
+
+  width: 10% !important;
+  height: 8.7% !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  border: none !important;
+  background: transparent !important;
+
+  display: flex !important;
+
+  align-items: flex-start !important;
+  justify-content: center !important;
+
+  z-index: 110 !important;
+}
+
+.logo-placeholder img {
+  display: block !important;
+
+  width: 100% !important;
+  height: 100% !important;
+
+  max-width: none !important;
+  max-height: none !important;
+
+  object-fit: contain !important;
+  object-position: center top !important;
+}
+
+
+/* =========================================================
+   RUMI + DIVIDER — DESKTOP
    ========================================================= */
 
 .sponsor-logo {
-  position: absolute;
+  position: absolute !important;
 
-  top: 1.8%;
-  left: 13.8%;
+  /*
+    Sabka:
+    left  = 3.45%
+    width = 10%
 
-  height: 7.5%;
+    Divider starts 18px after Sabka.
+  */
 
-  display: flex;
-  align-items: center;
+  left: calc(3.45% + 10% + 18px) !important;
 
-  gap: 14px;
+  top: 2.5% !important;
 
-  padding: 0;
-  margin: 0;
+  width: auto !important;
+  height: 5.5% !important;
 
-  z-index: 110;
+  margin: 0 !important;
+  padding: 0 !important;
+
+  display: flex !important;
+
+  align-items: center !important;
+
+  gap: 18px !important;
+
+  z-index: 110 !important;
 }
+
+
+/* Vertical divider */
 
 .sponsor-logo::before {
   content: "";
 
-  width: 1px;
-  height: 70%;
+  width: 1px !important;
+  height: 65% !important;
 
-  background: rgba(255, 255, 255, 0.35);
+  flex: 0 0 1px !important;
 
-  flex: 0 0 auto;
+  background: rgba(255, 255, 255, 0.35) !important;
 }
 
+
+/* Rumi logo */
+
 .sponsor-logo img {
-  display: block;
+  display: block !important;
 
-  width: auto;
-  height: 100%;
+  width: auto !important;
+  height: 100% !important;
 
-  object-fit: contain;
+  max-width: 150px !important;
+  max-height: 100% !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  object-fit: contain !important;
 }
 
 
 /* =========================================================
-   DESKTOP NAV
+   DESKTOP NAVIGATION
    ========================================================= */
 
 .nav {
-  position: absolute;
+  position: absolute !important;
 
-  top: 3%;
-  right: 2.8%;
+  top: 3% !important;
+  right: 2.8% !important;
 
-  height: 5.1%;
+  height: 5.1% !important;
 
-  display: flex;
-  align-items: center;
+  display: flex !important;
 
-  gap: 3.6vw;
+  align-items: center !important;
 
-  z-index: 110;
+  gap: 3.6vw !important;
+
+  z-index: 110 !important;
 }
 
 .nav a {
-  color: var(--white);
+  color: var(--white) !important;
 
-  text-decoration: none;
+  text-decoration: none !important;
 
-  font-size: clamp(9px, 1.05vw, 16px);
+  font-size: clamp(9px, 1.05vw, 16px) !important;
 
-  font-weight: 500;
+  font-weight: 500 !important;
 
-  white-space: nowrap;
+  white-space: nowrap !important;
 
-  transition: 0.2s ease;
+  transition: color 0.2s ease !important;
 }
 
 .nav a:hover {
-  color: var(--green);
+  color: var(--green) !important;
 }
 
+
+/* =========================================================
+   GET TICKETS
+   ========================================================= */
+
 .nav-ticket {
-  margin-left: 0.2vw;
+  margin-left: 0.2vw !important;
 
-  width: 12.5vw;
+  width: 12.5vw !important;
 
-  min-width: 130px;
-  max-width: 192px;
+  min-width: 130px !important;
+  max-width: 192px !important;
 
-  height: 100%;
+  height: 100% !important;
 
-  border: 1px solid var(--green);
+  border: 1px solid var(--green) !important;
 
   color: var(--green) !important;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex !important;
+
+  align-items: center !important;
+  justify-content: center !important;
+
+  text-decoration: none !important;
 }
 
 .nav-ticket:hover {
-  background: var(--green);
-
+  background: var(--green) !important;
   color: #000 !important;
 }
 
 
 /* =========================================================
-   ACTIVE NAV
+   ACTIVE DESKTOP NAV
    ========================================================= */
 
 .nav a.active {
-  color: var(--white);
-
-  position: relative;
+  position: relative !important;
+  color: var(--white) !important;
 }
 
 .nav a.active::after {
@@ -175,7 +239,7 @@
 
 
 /* =========================================================
-   HAMBURGER / MOBILE MENU
+   MOBILE MENU — DEFAULT
    ========================================================= */
 
 .mobile-menu {
@@ -188,57 +252,38 @@
 
 
 /* =========================================================
-   MOBILE
+   MOBILE HEADER
    ========================================================= */
 
 @media screen and (max-width: 600px) {
 
-  /* -------------------------------------------------------
-     PAGE
-     ------------------------------------------------------- */
-
-  html,
-  body {
-    width: 100%;
-    min-height: 100%;
-
-    margin: 0;
-    padding: 0;
-
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  html::-webkit-scrollbar,
-  body::-webkit-scrollbar {
-    display: none;
-
-    width: 0;
-    height: 0;
-  }
-
-
-  /* -------------------------------------------------------
+  /* =======================================================
      SABKA LOGO
-     SAME SIZE ON INDEX + VENUE
-     ------------------------------------------------------- */
+     ======================================================= */
 
   .logo-placeholder {
     position: absolute !important;
 
-    top: 16px !important;
-    left: 12px !important;
+    /*
+      Slightly higher + slightly more right
+      than before.
+    */
+    top: 7px !important;
+    left: 22px !important;
 
     right: auto !important;
+    bottom: auto !important;
 
+    /*
+      SAME SIZE — unchanged.
+    */
     width: 110px !important;
-    height: 48px !important;
+    height: 58px !important;
 
     margin: 0 !important;
     padding: 0 !important;
 
     border: none !important;
-
     background: transparent !important;
 
     display: flex !important;
@@ -252,76 +297,87 @@
   .logo-placeholder img {
     display: block !important;
 
-    width: 100% !important;
-    height: 100% !important;
+    width: 110px !important;
+    height: 58px !important;
 
     max-width: none !important;
+    max-height: none !important;
 
     object-fit: contain !important;
+    object-position: left center !important;
   }
 
 
-  /* -------------------------------------------------------
-     RUMI LOGO
-     SAME SIZE ON INDEX + VENUE
-     ------------------------------------------------------- */
+  /* =======================================================
+     RUMI LOGO — MOBILE
+     ======================================================= */
 
   .sponsor-logo {
     position: absolute !important;
 
-    top: 18px !important;
+    top: 15px !important;
+    left: 105px !important;
 
-    /*
-      Sabka container starts at 12px
-      and is 110px wide.
+    right: auto !important;
+    bottom: auto !important;
 
-      Rumi starts after it with a small gap.
-    */
-    left: 122px !important;
+    width: 105px !important;
+    height: 40px !important;
 
-    height: 35px !important;
+    margin: 0 !important;
+    padding: 0 !important;
 
     display: flex !important;
 
     align-items: center !important;
+    justify-content: flex-start !important;
 
-    gap: 10px !important;
-
-    padding: 0 !important;
-    margin: 0 !important;
+    gap: 0 !important;
 
     z-index: 110 !important;
   }
 
+
+  /* Divider */
+
   .sponsor-logo::before {
     content: "";
+
+    display: block !important;
 
     width: 1px !important;
     height: 23px !important;
 
-    flex: 0 0 auto !important;
+    flex: 0 0 1px !important;
 
     background: rgba(255, 255, 255, 0.35) !important;
   }
+
+
+  /* Rumi image */
 
   .sponsor-logo img {
     display: block !important;
 
     width: 80px !important;
-    height: auto !important;
+    height: 35px !important;
 
     max-width: 80px !important;
     max-height: 35px !important;
 
-    margin: 0 !important;
+    margin-left: 12px !important;
+
+    margin-top: 0 !important;
+
+    padding: 0 !important;
 
     object-fit: contain !important;
   }
 
 
-  /* -------------------------------------------------------
+  /* =======================================================
      MOBILE NAV CONTAINER
-     ------------------------------------------------------- */
+     ======================================================= */
 
   .nav {
     position: absolute !important;
@@ -332,15 +388,14 @@
     right: 0 !important;
 
     width: 100% !important;
-
     height: 40px !important;
 
     padding: 0 12px !important;
+    margin: 0 !important;
 
     display: flex !important;
 
     align-items: center !important;
-
     justify-content: flex-end !important;
 
     gap: 0 !important;
@@ -349,18 +404,16 @@
   }
 
 
-  /* -------------------------------------------------------
-     HIDE DESKTOP LINKS
-     ------------------------------------------------------- */
+  /* Hide desktop navigation */
 
   .nav > a {
     display: none !important;
   }
 
 
-  /* -------------------------------------------------------
+  /* =======================================================
      HAMBURGER
-     ------------------------------------------------------- */
+     ======================================================= */
 
   .mobile-menu {
     display: flex !important;
@@ -384,7 +437,7 @@
 
     gap: 4px !important;
 
-    cursor: pointer;
+    cursor: pointer !important;
 
     z-index: 110 !important;
   }
@@ -396,14 +449,15 @@
     height: 1px !important;
 
     margin: 0 !important;
+    padding: 0 !important;
 
     background: var(--green) !important;
   }
 
 
-  /* -------------------------------------------------------
+  /* =======================================================
      MOBILE MENU PANEL
-     ------------------------------------------------------- */
+     ======================================================= */
 
   .mobile-menu-panel {
     position: fixed !important;
@@ -422,6 +476,9 @@
 
     gap: 28px !important;
 
+    margin: 0 !important;
+    padding: 0 !important;
+
     background: #000 !important;
 
     z-index: 200 !important;
@@ -438,7 +495,9 @@
   }
 
 
-  /* OPEN MENU */
+  /* =======================================================
+     OPEN MENU
+     ======================================================= */
 
   .mobile-menu-panel.open {
     opacity: 1 !important;
@@ -449,7 +508,9 @@
   }
 
 
-  /* MENU LINKS */
+  /* =======================================================
+     MOBILE MENU LINKS
+     ======================================================= */
 
   .mobile-menu-panel a {
     display: block !important;
@@ -461,6 +522,8 @@
     font-size: 22px !important;
 
     font-weight: 500 !important;
+
+    position: relative !important;
   }
 
   .mobile-menu-panel a:hover {
@@ -468,7 +531,9 @@
   }
 
 
-  /* ACTIVE MOBILE LINK */
+  /* =======================================================
+     ACTIVE MOBILE LINK
+     ======================================================= */
 
   .mobile-menu-panel a.active {
     color: var(--white) !important;
@@ -492,9 +557,9 @@
   }
 
 
-  /* -------------------------------------------------------
+  /* =======================================================
      CLOSE BUTTON
-     ------------------------------------------------------- */
+     ======================================================= */
 
   .mobile-menu-close {
     display: flex !important;
@@ -507,8 +572,8 @@
     width: 35px !important;
     height: 35px !important;
 
-    padding: 0 !important;
     margin: 0 !important;
+    padding: 0 !important;
 
     border: 1px solid var(--green) !important;
 
@@ -516,7 +581,7 @@
 
     color: transparent !important;
 
-    cursor: pointer;
+    cursor: pointer !important;
 
     align-items: center !important;
     justify-content: center !important;
@@ -540,11 +605,15 @@
   }
 
   .mobile-menu-close::before {
-    transform: translate(-50%, -50%) rotate(45deg);
+    transform:
+      translate(-50%, -50%)
+      rotate(45deg);
   }
 
   .mobile-menu-close::after {
-    transform: translate(-50%, -50%) rotate(-45deg);
+    transform:
+      translate(-50%, -50%)
+      rotate(-45deg);
   }
 
   .mobile-menu-close:hover {
@@ -560,7 +629,7 @@
 
 
 /* =========================================================
-   HIDE SCROLLBARS
+   MOBILE SCROLLBAR HIDE
    ========================================================= */
 
 @media screen and (max-width: 600px) {
@@ -572,7 +641,6 @@
 
   *::-webkit-scrollbar {
     display: none;
-
     width: 0;
     height: 0;
   }
